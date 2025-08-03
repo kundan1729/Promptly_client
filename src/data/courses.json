@@ -1,0 +1,439 @@
+[
+  {
+  "id": 1,
+  "courseId": "complete-prompt-engineering-masterclass",
+  "title": "Complete Prompt Engineering Masterclass",
+  "rating": 4.9,
+  "students": 7,
+  "duration": "8 hours",
+  "level": "All Levels",
+  "price": 199,
+  "originalPrice": 249,
+  "image": "https://images.pexels.com/photos/5428836/pexels-photo-5428836.jpeg?auto=compress&cs=tinysrgb&w=400",
+  "description": "Master the art of prompt engineering from basics to advanced techniques. Learn to craft prompts that get exceptional results from any AI model.",
+  "modules": [
+    {
+      "id": 1,
+      "title": "Prompt Basics",
+      "lessons": [
+        {
+          "id": 1,
+          "title": "What is a Prompt?",
+          "article": "A prompt is an instruction or input given to an AI model to guide its response. In this lesson, you will learn the fundamentals of prompt design.",
+          "task": "Write a simple prompt for a chatbot that asks for the weather.",
+          "aiFeedback": true
+        },
+        {
+          "id": 2,
+          "title": "Prompt Types",
+          "article": "There are various types of prompts: instruction, role play, chain of thought, few shot, and zero shot. Each serves a different purpose.",
+          "task": "List two differences between instruction and role play prompts.",
+          "aiFeedback": true
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Advanced Prompting",
+      "lessons": [
+        {
+          "id": 3,
+          "title": "Chain-of-Thought",
+          "article": "Chain-of-thought prompting encourages the AI to reason step by step. This is useful for complex problem solving.",
+          "task": "Write a prompt that asks the AI to solve a math problem step by step.",
+          "aiFeedback": true
+        }
+      ]
+    }
+  ],
+  "popular": true
+},
+{
+  "id": 2,
+  "courseId": "creative-prompting-for-writers-artists-storytellers",
+  "title": "Creative Prompting for Writers, Artists & Storytellers",
+  "rating": 4.8,
+  "students": 12,
+  "duration": "10 hours",
+  "level": "Intermediate",
+  "price": 179,
+  "originalPrice": 229,
+  "image": "https://images.pexels.com/photos/5965858/pexels-photo-5965858.jpeg?auto=compress&cs=tinysrgb&w=400",
+  "description": "Unleash your creativity by using AI prompts for storytelling, visual art generation, character development, and world-building. Ideal for writers, designers, and creators.",
+  "modules": [
+    {
+      "id": 1,
+      "title": "Creative Thinking with AI",
+      "lessons": [
+        {
+          "id": 1,
+          "title": "Story Seeds & Openers",
+          "article": "Learn to craft prompts that inspire unique stories, dialogues, and scenarios with emotional depth.",
+          "task": "Write a prompt that generates a story starting with: 'The sky wasn't always this red...'",
+          "aiFeedback": true
+        },
+        {
+          "id": 2,
+          "title": "Generating Art with DALL·E",
+          "article": "Use creative visual descriptions to generate original artwork using image-based AI tools.",
+          "task": "Create a prompt for an artwork depicting 'a futuristic floating jungle city at sunset.'",
+          "aiFeedback": true
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Fictional Worlds and Characters",
+      "lessons": [
+        {
+          "id": 3,
+          "title": "Character Profiles",
+          "article": "Design AI prompts that help you build deep, multidimensional characters with backstories and dialogue styles.",
+          "task": "Create a prompt for a character who is a time-traveling chef with memory loss.",
+          "aiFeedback": true
+        },
+        {
+          "id": 4,
+          "title": "Interactive Storytelling",
+          "article": "Build branching narratives and choose-your-own-adventure styles using AI decision prompts.",
+          "task": "Write a prompt that allows the user to choose between two story paths in a magical forest.",
+          "aiFeedback": true
+        }
+      ]
+    }
+  ],
+  "popular": false
+},
+{
+  "id": 3,
+  "courseId": "no-code-ai-assistant-building-with-prompt-design",
+  "title": "No-Code AI Assistant Building with Prompt Design",
+  "rating": 4.7,
+  "students": 18,
+  "duration": "6.5 hours",
+  "level": "Beginner to Intermediate",
+  "price": 149,
+  "originalPrice": 199,
+  "image": "https://images.pexels.com/photos/1181253/pexels-photo-1181253.jpeg?auto=compress&cs=tinysrgb&w=400",
+  "description": "Build your own AI-powered virtual assistant using ChatGPT and no-code tools like Zapier, Notion, and Make.com. Learn to structure prompts that automate workflows and personalize responses without writing code.",
+  "modules": [
+    {
+      "id": 1,
+      "title": "Getting Started with No-Code AI",
+      "lessons": [
+        {
+          "id": 1,
+          "title": "Understanding No-Code AI Tools",
+          "article": "Learn how tools like ChatGPT, Zapier, and Make.com can be combined to create intelligent assistants without programming.",
+          "task": "Describe a daily task you want to automate using an AI assistant.",
+          "aiFeedback": true
+        },
+        {
+          "id": 2,
+          "title": "Prompting for Automation",
+          "article": "Design prompts that work as triggers and responses in automation workflows.",
+          "task": "Create a prompt that responds to customer queries pulled from a Google Sheet.",
+          "aiFeedback": true
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Building & Personalizing Assistants",
+      "lessons": [
+        {
+          "id": 3,
+          "title": "Create a Branded AI Personality",
+          "article": "Use persona-based prompting to give your assistant a consistent tone, role, and purpose.",
+          "task": "Write a prompt for an assistant called Ava who speaks like a cheerful productivity coach.",
+          "aiFeedback": true
+        },
+        {
+          "id": 4,
+          "title": "Deploying Your AI Bot",
+          "article": "Connect your AI assistant to tools like Telegram, Slack, or email with Zapier workflows.",
+          "task": "Design a workflow where a customer question in Telegram triggers a reply from your assistant.",
+          "aiFeedback": true
+        }
+      ]
+    }
+  ],
+  "popular": true
+},
+{
+  "id": 4,
+  "courseId": "persona-based-prompting-mastering-the-roleplay-pattern",
+  "title": "Persona-Based Prompting: Mastering the Roleplay Pattern",
+  "rating": 4.9,
+  "students": 11,
+  "duration": "6 hours",
+  "level": "Intermediate",
+  "price": 169,
+  "originalPrice": 219,
+  "image": "https://images.pexels.com/photos/1144283/pexels-photo-1144283.jpeg?auto=compress&cs=tinysrgb&w=400",
+  "description": "Learn to design powerful AI interactions using persona-based prompts. Use roleplay to simulate experts, coaches, fictional characters, and branded voices for more context-aware, creative, and user-friendly results.",
+  "modules": [
+    {
+      "id": 1,
+      "title": "Persona Pattern Fundamentals",
+      "lessons": [
+        {
+          "id": 1,
+          "title": "What is a Persona Prompt?",
+          "article": "A persona prompt tells the AI to act as someone or something — a role, profession, or personality. This helps guide the tone and style of responses.",
+          "task": "Write a prompt where the AI acts as a patient English teacher for a 10-year-old student.",
+          "aiFeedback": true
+        },
+        {
+          "id": 2,
+          "title": "Consistency in Roleplay",
+          "article": "Learn techniques to keep the AI consistently in character using constraints and memory cues.",
+          "task": "Create a persona prompt for a sarcastic movie critic reviewing a new superhero film.",
+          "aiFeedback": true
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Applications of Persona Prompting",
+      "lessons": [
+        {
+          "id": 3,
+          "title": "Simulating Experts & Mentors",
+          "article": "Simulate the voice of a therapist, career coach, historian, or developer to create value-rich conversations.",
+          "task": "Design a prompt where the AI acts as a DevOps coach guiding a student through CI/CD.",
+          "aiFeedback": true
+        }
+      ]
+    }
+  ],
+  "popular": false
+},
+{
+  "id": 5,
+  "courseId": "chain-of-thought-prompting-teach-ai-to-reason-step-by-step",
+  "title": "Chain-of-Thought Prompting: Teach AI to Reason Step-by-Step",
+  "rating": 4.8,
+  "students": 14,
+  "duration": "5.5 hours",
+  "level": "Intermediate to Advanced",
+  "price": 159,
+  "originalPrice": 199,
+  "image": "https://images.pexels.com/photos/3183173/pexels-photo-3183173.jpeg?auto=compress&cs=tinysrgb&w=400",
+  "description": "Master the Chain-of-Thought (CoT) prompting technique to guide the AI through logical steps, structured explanations, and problem-solving workflows. Ideal for reasoning-heavy tasks.",
+  "modules": [
+    {
+      "id": 1,
+      "title": "Chain-of-Thought Basics",
+      "lessons": [
+        {
+          "id": 1,
+          "title": "What is CoT Prompting?",
+          "article": "CoT prompting instructs the AI to explain its thinking process step-by-step, improving output quality for tasks like math, logic, and coding.",
+          "task": "Write a prompt that guides the AI to solve a riddle by thinking aloud.",
+          "aiFeedback": true
+        },
+        {
+          "id": 2,
+          "title": "Why CoT Works",
+          "article": "CoT improves performance by activating reasoning chains, especially in zero-shot or few-shot cases.",
+          "task": "Rephrase a factual question as a step-by-step reasoning challenge.",
+          "aiFeedback": true
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Real-World CoT Use Cases",
+      "lessons": [
+        {
+          "id": 3,
+          "title": "Use CoT in Interviews, Code, and Analysis",
+          "article": "Apply CoT to mock interviews, code debugging, financial analysis, and decision support.",
+          "task": "Create a CoT prompt that walks through a debugging task in a Python function.",
+          "aiFeedback": true
+        }
+      ]
+    }
+  ],
+  "popular": true
+},
+{
+  "id": 6,
+  "courseId": "rewriting-editing-and-translating-prompts-the-refinement-pattern",
+  "title": "Rewriting, Editing, and Translating Prompts: The Refinement Pattern",
+  "rating": 4.7,
+  "students": 9,
+  "duration": "6 hours",
+  "level": "All Levels",
+  "price": 149,
+  "originalPrice": 189,
+  "image": "https://images.pexels.com/photos/4458554/pexels-photo-4458554.jpeg?auto=compress&cs=tinysrgb&w=400",
+  "description": "Learn to use prompts that instruct the AI to rewrite, improve, translate, or simplify content. Ideal for writers, marketers, and multilingual tasks.",
+  "modules": [
+    {
+      "id": 1,
+      "title": "The Refinement Pattern",
+      "lessons": [
+        {
+          "id": 1,
+          "title": "Rewriting for Clarity or Tone",
+          "article": "Teach AI to modify a piece of content's tone, length, or audience-fit using structured instructions.",
+          "task": "Prompt the AI to rewrite a formal paragraph into casual tone for Gen Z readers.",
+          "aiFeedback": true
+        },
+        {
+          "id": 2,
+          "title": "Proofreading & Grammar Prompts",
+          "article": "Use refinement prompts to fix grammar, enhance style, and increase coherence.",
+          "task": "Give a poorly written paragraph and prompt the AI to enhance it for clarity.",
+          "aiFeedback": true
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "AI as a Translator or Converter",
+      "lessons": [
+        {
+          "id": 3,
+          "title": "Multilingual Prompting",
+          "article": "Translate between languages or dialects using accurate refinement instructions.",
+          "task": "Prompt the AI to convert English marketing copy into formal Japanese.",
+          "aiFeedback": true
+        }
+      ]
+    }
+  ],
+  "popular": false
+},
+{
+  "id": 7,
+  "courseId": "prompt-tuning-optimization-from-average-to-expert",
+  "title": "Prompt Tuning & Optimization: From Average to Expert",
+  "rating": 4.9,
+  "students": 10,
+  "duration": "5 hours",
+  "level": "Intermediate",
+  "price": 159,
+  "originalPrice": 199,
+  "image": "https://images.pexels.com/photos/4709285/pexels-photo-4709285.jpeg?auto=compress&cs=tinysrgb&w=400",
+  "description": "Learn how to fine-tune your prompts using a testing-feedback-improve loop. Understand the impact of small tweaks on output quality, tone, and logic.",
+  "modules": [
+    {
+      "id": 1,
+      "title": "Why Optimization Matters",
+      "lessons": [
+        {
+          "id": 1,
+          "title": "Prompt Length, Framing, and Specificity",
+          "article": "Even small edits to phrasing, detail, or order can dramatically change how AI responds.",
+          "task": "Rewrite a vague prompt into a highly specific one for an AI writing assistant.",
+          "aiFeedback": true
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Test–Tweak–Repeat",
+      "lessons": [
+        {
+          "id": 2,
+          "title": "Building a Prompt Feedback Loop",
+          "article": "Run structured A/B testing and make incremental changes to improve relevance or creativity.",
+          "task": "Give two versions of the same prompt and compare AI outputs — which is better and why?",
+          "aiFeedback": true
+        }
+      ]
+    }
+  ],
+  "popular": true
+},
+{
+  "id": 8,
+  "courseId": "prompt-debugging-fixing-bad-or-unclear-responses",
+  "title": "Prompt Debugging: Fixing Bad or Unclear Responses",
+  "rating": 4.8,
+  "students": 8,
+  "duration": "4.5 hours",
+  "level": "Intermediate",
+  "price": 149,
+  "originalPrice": 189,
+  "image": "https://images.pexels.com/photos/1181335/pexels-photo-1181335.jpeg?auto=compress&cs=tinysrgb&w=400",
+  "description": "Not getting the results you expect from your prompts? Learn how to analyze bad responses and fix prompt phrasing, logic, context, and formatting issues.",
+  "modules": [
+    {
+      "id": 1,
+      "title": "Common Prompt Failures",
+      "lessons": [
+        {
+          "id": 1,
+          "title": "Vague vs Clear Inputs",
+          "article": "Learn how vague wording, missing context, or overloaded prompts lead to poor results.",
+          "task": "Fix a badly written prompt for a restaurant recommendation chatbot.",
+          "aiFeedback": true
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Debugging Techniques",
+      "lessons": [
+        {
+          "id": 2,
+          "title": "Chunking, Reordering, and Constraints",
+          "article": "Break down complex prompts into manageable steps and use constraints to limit hallucination.",
+          "task": "Rewrite a prompt to avoid off-topic or overly verbose AI responses.",
+          "aiFeedback": true
+        }
+      ]
+    }
+  ],
+  "popular": false
+},
+{
+  "id": 9,
+  "courseId": "prompt-audit-scoring-ranking-evaluating-ai-outputs",
+  "title": "Prompt Audit: Scoring, Ranking & Evaluating AI Outputs",
+  "rating": 4.7,
+  "students": 6,
+  "duration": "5 hours",
+  "level": "Advanced",
+  "price": 169,
+  "originalPrice": 219,
+  "image": "https://images.pexels.com/photos/3184298/pexels-photo-3184298.jpeg?auto=compress&cs=tinysrgb&w=400",
+  "description": "Learn how to evaluate AI responses using rubrics for quality, accuracy, tone, creativity, and alignment. Create scoring frameworks to improve prompt reliability at scale.",
+  "modules": [
+    {
+      "id": 1,
+      "title": "What Makes a 'Good' Response?",
+      "lessons": [
+        {
+          "id": 1,
+          "title": "Evaluation Criteria",
+          "article": "Define what ‘good’ means for different use cases: precision, engagement, coherence, actionability.",
+          "task": "Score 3 sample AI outputs using a rubric for tone and clarity.",
+          "aiFeedback": false
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Feedback-Driven Improvement",
+      "lessons": [
+        {
+          "id": 2,
+          "title": "Create a Feedback Pipeline",
+          "article": "Use self-evaluation, AI self-critique, or user scoring to continuously refine prompts.",
+          "task": "Write a prompt that asks the AI to critique and improve its own answer.",
+          "aiFeedback": true
+        }
+      ]
+    }
+  ],
+  "popular": true
+}
+
+
+
+]
