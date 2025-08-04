@@ -1,4 +1,5 @@
 import React from 'react';
+import Footer from '../components/Footer';
 import { Trophy, Calendar, Users, Gift, Clock, Star, Award, Target } from 'lucide-react';
 
 const Contest: React.FC = () => {
@@ -19,21 +20,21 @@ const Contest: React.FC = () => {
 
   const pastWinners = [
   {
-    name: 'Aarav Mehta',
+    name: 'Shashwat Singh',
     prompt: 'Character-driven narrative prompts',
-    prize: '₹349',
-    month: 'January 2025'
+    prize: '₹1000',
+    month: 'August 2025'
   },
   {
-    name: 'Sneha Reddy',
+    name: 'Gaurav Kumar',
     prompt: 'Historical fiction generators',
-    prize: '₹349',
-    month: 'December 2024'
+    prize: '₹500',
+    month: 'March 2025'
   },
   {
-    name: 'Kabir Sharma',
+    name: 'Rishi Raj',
     prompt: 'Sci-fi world building prompts',
-    prize: '₹349',
+    prize: '₹750',
     month: 'November 2024'
   }
 ];
@@ -42,21 +43,21 @@ const Contest: React.FC = () => {
   const upcomingContests = [
     {
       title: 'Business Automation Prompts',
-      date: '2025-03-01',
+      date: '2025-09-01',
         prize: 'Zomato Coupon',
       category: 'Business',
       description: 'Create prompts that automate business workflows'
     },
     {
       title: 'Educational Content Creation',
-      date: '2025-03-15',
+      date: '2025-10-15',
         prize: 'Any 3 Course Free',
       category: 'Education',
       description: 'Design prompts for creating educational materials'
     },
     {
       title: 'Code Generation Challenge',
-      date: '2025-04-01',
+      date: '2025-11-01',
         prize: 'Amazon Gift Card',
       category: 'Technical',
       description: 'Build prompts for efficient code generation'
@@ -64,11 +65,11 @@ const Contest: React.FC = () => {
   ];
 
  const leaderboard = [
-  { rank: 1, name: 'Ishita Nair', points: 2850, badge: '🥇' },
-  { rank: 2, name: 'Rahul Verma', points: 2720, badge: '🥈' },
-  { rank: 3, name: 'Tanvi Deshmukh', points: 2650, badge: '🥉' },
-  { rank: 4, name: 'Karan Patel', points: 2480, badge: '⭐' },
-  { rank: 5, name: 'Meera Joshi', points: 2350, badge: '⭐' }
+  { rank: 1, name: 'Rishabh Praksah', points: 2850, badge: '🥇' },
+  { rank: 2, name: 'Prashant Prabhakar', points: 2720, badge: '🥈' },
+  { rank: 3, name: 'Shreya Singh', points: 2650, badge: '🥉' },
+  { rank: 4, name: 'Prabhat Singh', points: 2480, badge: '⭐' },
+  { rank: 5, name: 'Supriya Roy', points: 2350, badge: '⭐' }
 ];
 
 
@@ -131,7 +132,7 @@ const Contest: React.FC = () => {
                   </div>
                   <div className="text-center p-4 bg-green-50 rounded-lg">
                     <Calendar className="w-8 h-8 text-green-500 mx-auto mb-2" />
-                    <div className="font-semibold text-gray-900">Feb 15</div>
+                    <div className="font-semibold text-gray-900">Oct 15</div>
                     <div className="text-sm text-gray-600">Deadline</div>
                   </div>
                   <div className="text-center p-4 bg-purple-50 rounded-lg">
@@ -273,6 +274,7 @@ const Contest: React.FC = () => {
           </div>
         </div>
       </main>
+      <Footer />
     </div>
   );
 };

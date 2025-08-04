@@ -1,9 +1,8 @@
 // NavBar.tsx - Reusable navigation bar/header for all pages
 import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { Home, BookOpen, Trophy, Play, Crown, LogIn, UserCircle, Lightbulb, BookOpenCheck } from 'lucide-react';
+import { UserCircle } from 'lucide-react'; // only import kept for Logout/Profile
 import { useNotification } from './NotificationContext';
-
 
 const NavBar: React.FC = () => {
   const navigate = useNavigate();
@@ -36,7 +35,7 @@ const NavBar: React.FC = () => {
   };
 
   return (
-    <nav className="sticky top-0 flex items-center justify-between px-6 py-4 bg-white shadow-md z-40">
+    <nav className="sticky top-0 flex items-center justify-between px-6 py-5 bg-white shadow-md z-40">
       <div className="flex items-center gap-2">
         <Link to="/" className="flex items-center gap-2">
           <div className="bg-purple-600 rounded-lg w-8 h-8 flex items-center justify-center">
@@ -46,27 +45,30 @@ const NavBar: React.FC = () => {
         </Link>
       </div>
       <div className="flex gap-6 items-center">
-        <Link to="/" className="flex items-center gap-1 text-gray-700 hover:text-purple-600">
-          <Home className="w-5 h-5" /> Home
+        <Link to="/" className="text-gray-700 hover:text-purple-600">
+          Home
         </Link>
-        <Link to="/about" className="flex items-center gap-1 text-gray-700 hover:text-purple-600">
-          <UserCircle className="w-5 h-5" /> About
+        <Link to="/about" className="text-gray-700 hover:text-purple-600">
+          About
         </Link>
-        <Link to="/learn" className="flex items-center gap-1 text-gray-700 hover:text-purple-600">
-          <Lightbulb className="w-5 h-5" /> Learn Prompt
+        <Link to="/playground" className="text-gray-700 hover:text-purple-600">
+          Playground
         </Link>
-        <Link to="/courses" className="flex items-center gap-1 text-gray-700 hover:text-purple-600">
-          <BookOpenCheck className="w-5 h-5" /> Courses
+        <Link to="/learn" className="text-gray-700 hover:text-purple-600">
+          Learn Prompt
         </Link>
-        <Link to="/contest" className="flex items-center gap-1 text-gray-700 hover:text-purple-600">
-          <Trophy className="w-5 h-5" /> Contest
+        <Link to="/courses" className="text-gray-700 hover:text-purple-600">
+          Courses
         </Link>
-        <Link to="/playground" className="flex items-center gap-1 text-gray-700 hover:text-purple-600 ">
-          <Play className="w-5 h-5 text-blue-600" /> Playground
+        <Link to="/contest" className="text-gray-700 hover:text-purple-600">
+          Contest
         </Link>
         
-        <Link to="/premium" className="flex items-center gap-1 px-4 py-1 rounded-full bg-gradient-to-r from-yellow-400 to-orange-500 text-white font-semibold shadow hover:from-yellow-500 hover:to-orange-600 transition">
-          <Crown className="w-5 h-5" /> Get Premium
+        <Link
+          to="/premium"
+          className="px-4 py-1 rounded-full bg-gradient-to-r from-yellow-400 to-orange-500 text-white font-semibold shadow hover:from-yellow-500 hover:to-orange-600 transition"
+        >
+          Get Premium
         </Link>
         {user ? (
           <div className="relative">
@@ -93,8 +95,8 @@ const NavBar: React.FC = () => {
             )}
           </div>
         ) : (
-          <Link to="/login" className="flex items-center gap-1 text-gray-700 hover:text-purple-600">
-            <LogIn className="w-5 h-5" /> Login
+          <Link to="/login" className="text-gray-700 hover:text-purple-600">
+            Login
           </Link>
         )}
       </div>
