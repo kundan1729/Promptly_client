@@ -2,8 +2,6 @@
 // ForgotPassword.tsx - Password reset request page
 import React, { useState } from 'react';
 
-const API_URL = import.meta.env.VITE_API_URL || '';
-
 import Input from '../components/Input'; // Custom input component
 import PrimaryButton from '../components/PrimaryButton'; // Custom button component
 import Notification from '../components/Notification'; // Custom notification/alert
@@ -34,7 +32,7 @@ const ForgotPassword: React.FC = () => {
     setLoading(true);
     try {
       // Send password reset request to backend
-  await fetch(`${API_URL}/api/auth/forgot`, {
+      await fetch('/api/auth/forgot', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email })

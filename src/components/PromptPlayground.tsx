@@ -1,7 +1,6 @@
-const API_URL = import.meta.env.VITE_API_URL || '';
 import React, { useState, createContext, useContext } from 'react';
 import PatternizeDrawer from './PatternizeDrawer';
-import { FiAlertCircle } from 'react-icons/fi';
+import { FiCopy, FiCheck, FiAlertCircle } from 'react-icons/fi';
 import { FaStar, FaThumbsUp } from 'react-icons/fa';
 import { HiOutlineLightBulb } from 'react-icons/hi';
 import { promptPatterns, PromptPattern } from '../data/patterns';
@@ -46,7 +45,8 @@ const PromptPlayground: React.FC = () => {
   const [loadingDemo, setLoadingDemo] = useState<boolean>(false);
   const [feedback, setFeedback] = useState<Feedback | null>(null);
   const [demo, setDemo] = useState<Demo | null>(null);
-  const [saving, setSaving] = useState<boolean>(false);
+  const [copyState, setCopyState] = useState<'idle' | 'copied'>('idle');
+  const [saving, setSaving] = useState(false);
 
 
   // Use local patterns data
@@ -55,9 +55,9 @@ const PromptPlayground: React.FC = () => {
   // Handlers
   const handlePatternSelect = (pattern: Pattern) => {
     setSelectedPattern(pattern);
-  setFeedback(null);
-  setDemo(null);
-  setUserInput('');
+    setFeedback(null);
+    setDemo(null);
+    setUserInput('');
   };
 
   const handleInputChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => setUserInput(e.target.value);
@@ -67,7 +67,7 @@ const PromptPlayground: React.FC = () => {
     setLoadingFeedback(true);
     setFeedback(null);
     try {
-  const res = await fetch(`${API_URL}/api/groq/feedback`, {
+      const res = await fetch('/api/groq/feedback', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ prompt: userInput, pattern: selectedPattern?.name })
@@ -88,7 +88,7 @@ const PromptPlayground: React.FC = () => {
       }
       setFeedback(data);
       // Store history in MongoDB
-  await fetch(`${API_URL}/api/history`, {
+      await fetch('/api/history', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ prompt: userInput, feedback: data, pattern: selectedPattern?.name })
@@ -104,7 +104,7 @@ const PromptPlayground: React.FC = () => {
     setLoadingDemo(true);
     setDemo(null);
     try {
-      const res = await fetch(`${API_URL}/api/groq/patternize`, {
+      const res = await fetch('/api/groq/patternize', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ prompt: userInput, pattern: selectedPattern?.name })
@@ -125,7 +125,7 @@ const PromptPlayground: React.FC = () => {
       }
       setDemo(data);
       // Store history in MongoDB
-      await fetch(`${API_URL}/api/history`, {
+      await fetch('/api/history', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ prompt: userInput, patternized: data, pattern: selectedPattern?.name })
@@ -148,7 +148,7 @@ const PromptPlayground: React.FC = () => {
     if (!demo || !demo.result) return;
     setSaving(true);
     try {
-      await fetch(`${API_URL}/api/collection`, {
+      await fetch('/api/collection', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ prompt: userInput, patternized: demo.result, pattern: selectedPattern?.name })

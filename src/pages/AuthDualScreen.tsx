@@ -1,6 +1,4 @@
 import React, { useState } from 'react';
-
-const API_URL = import.meta.env.VITE_API_URL || '';
 import { FaEnvelope, FaKey, FaUser, FaGoogle, FaGithub } from 'react-icons/fa';
 import { HiOutlineEye, HiOutlineEyeOff } from 'react-icons/hi';
 import { useNotification } from '../components/NotificationContext';
@@ -53,7 +51,7 @@ const AuthDualScreen: React.FC = () => {
 
   // Handler for Google OAuth
   const handleGoogleLogin = () => {
-    window.location.href = `${API_URL}/api/auth/google`;
+    window.location.href = '/api/auth/google';
   };
 
   // Login form submit
@@ -61,7 +59,7 @@ const AuthDualScreen: React.FC = () => {
     e.preventDefault();
     setLoading(true);
     try {
-  const res = await fetch(`${API_URL}/api/auth/login`, {
+      const res = await fetch('/api/auth/login', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email: loginEmail, password: loginPassword })
@@ -96,7 +94,7 @@ const AuthDualScreen: React.FC = () => {
     }
     setLoading(true);
     try {
-  const res = await fetch(`${API_URL}/api/auth/register`, {
+      const res = await fetch('/api/auth/register', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ name: registerName, email: registerEmail, password: registerPassword })
@@ -124,7 +122,7 @@ const AuthDualScreen: React.FC = () => {
     }
     setLoading(true);
     try {
-  const res = await fetch(`${API_URL}/api/auth/forgot`, {
+      const res = await fetch('/api/auth/forgot', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email: loginEmail })
@@ -160,7 +158,7 @@ const AuthDualScreen: React.FC = () => {
               </button>
               <button
                 className="w-full flex items-center justify-center gap-3 py-2 mb-3 rounded-lg bg-white border border-gray-200 shadow-sm hover:bg-gray-50 transition font-semibold text-gray-700"
-                onClick={() => { window.location.href = `${API_URL}/api/auth/github`; }}
+                onClick={() => { window.location.href = '/api/auth/github'; }}
               >
                 <FaGithub className="text-gray-800 text-lg" /> Login with GitHub
               </button>
@@ -224,7 +222,7 @@ const AuthDualScreen: React.FC = () => {
               </button>
               <button
                 className="w-full flex items-center justify-center gap-3 py-2 mb-3 rounded-lg bg-white border border-gray-200 shadow-sm hover:bg-gray-50 transition font-semibold text-gray-700"
-                onClick={() => { window.location.href = `${API_URL}/api/auth/github`; }}
+                onClick={() => { window.location.href = '/api/auth/github'; }}
               >
                 <FaGithub className="text-gray-800 text-lg" /> Sign up with GitHub
               </button>
