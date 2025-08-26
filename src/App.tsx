@@ -1,3 +1,5 @@
+// Single source of truth for API URL
+const API_URL = import.meta.env.VITE_API_URL || '';
 import  { useState } from 'react';
 import { Play } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -53,7 +55,7 @@ function App() {
     setEnhancedText(null);
 
     try {
-      const response = await fetch('/api/enhance', {
+      const response = await fetch(`${API_URL}/api/enhance`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -81,7 +83,6 @@ function App() {
       setLoading(false);
     }
   };
-
   const hasSelectedRules = Object.values(rules).some(Boolean);
 
   return (

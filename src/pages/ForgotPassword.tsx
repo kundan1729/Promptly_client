@@ -32,7 +32,9 @@ const ForgotPassword: React.FC = () => {
     setLoading(true);
     try {
       // Send password reset request to backend
-      await fetch('/api/auth/forgot', {
+  // Single source of truth for API URL
+  const API_URL = import.meta.env.VITE_API_URL || '';
+  await fetch(`${API_URL}/api/auth/forgot`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email })

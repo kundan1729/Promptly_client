@@ -1,4 +1,6 @@
 import React, { useState, createContext, useContext } from 'react';
+// Single source of truth for API URL
+const API_URL = import.meta.env.VITE_API_URL || '';
 import PatternizeDrawer from './PatternizeDrawer';
 import { FiCopy, FiCheck, FiAlertCircle } from 'react-icons/fi';
 import { FaStar, FaThumbsUp } from 'react-icons/fa';
@@ -53,7 +55,7 @@ const PromptPlayground: React.FC = () => {
   const patterns = promptPatterns;
 
   // Handlers
-  const handlePatternSelect = (pattern: Pattern) => {
+  const handlePatternSelect = (pattern: PromptPattern) => {
     setSelectedPattern(pattern);
     setFeedback(null);
     setDemo(null);
@@ -67,7 +69,7 @@ const PromptPlayground: React.FC = () => {
     setLoadingFeedback(true);
     setFeedback(null);
     try {
-      const res = await fetch('/api/groq/feedback', {
+      const res = await fetch(`${API_URL}/api/groq/feedback`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ prompt: userInput, pattern: selectedPattern?.name })
@@ -88,13 +90,13 @@ const PromptPlayground: React.FC = () => {
       }
       setFeedback(data);
       // Store history in MongoDB
-      await fetch('/api/history', {
+      await fetch(`${API_URL}/api/history`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ prompt: userInput, feedback: data, pattern: selectedPattern?.name })
       });
     } catch (err) {
-      setFeedback({ error: 'Failed to get feedback.' });
+      setFeedback({ error: 'Failed to get feedback. Please check your network connection.' });
     }
     setLoadingFeedback(false);
   };
@@ -104,7 +106,7 @@ const PromptPlayground: React.FC = () => {
     setLoadingDemo(true);
     setDemo(null);
     try {
-      const res = await fetch('/api/groq/patternize', {
+      const res = await fetch(`${API_URL}/api/groq/patternize`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ prompt: userInput, pattern: selectedPattern?.name })
@@ -125,13 +127,13 @@ const PromptPlayground: React.FC = () => {
       }
       setDemo(data);
       // Store history in MongoDB
-      await fetch('/api/history', {
+      await fetch(`${API_URL}/api/history`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ prompt: userInput, patternized: data, pattern: selectedPattern?.name })
       });
     } catch (err) {
-      setDemo({ error: 'Failed to patternize prompt.' });
+      setDemo({ error: 'Failed to patternize prompt. Please check your network connection.' });
     }
     setLoadingDemo(false);
   };
@@ -148,11 +150,13 @@ const PromptPlayground: React.FC = () => {
     if (!demo || !demo.result) return;
     setSaving(true);
     try {
-      await fetch('/api/collection', {
+      await fetch(`${API_URL}/api/collection`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ prompt: userInput, patternized: demo.result, pattern: selectedPattern?.name })
       });
+    } catch {
+      // Optionally show a notification or error
     } finally {
       setSaving(false);
     }

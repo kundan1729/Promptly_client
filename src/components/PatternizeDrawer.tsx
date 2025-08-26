@@ -14,7 +14,9 @@ const PatternizeDrawer: React.FC<PatternizeDrawerProps> = ({ userPrompt, selecte
     setLoading(true);
     setOpen(true);
     try {
-      const res = await fetch('/api/groq/patternize', {
+  // Single source of truth for API URL
+  const API_URL = import.meta.env.VITE_API_URL || '';
+  const res = await fetch(`${API_URL}/api/groq/patternize`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ prompt: userPrompt, pattern: selectedPattern })

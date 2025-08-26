@@ -15,7 +15,9 @@ const NavBar: React.FC = () => {
     if (localUser) {
       setUser(JSON.parse(localUser));
     } else {
-      fetch('/api/auth/user', { credentials: 'include' })
+  // Single source of truth for API URL
+  const API_URL = import.meta.env.VITE_API_URL || '';
+  fetch(`${API_URL}/api/auth/user`, { credentials: 'include' })
         .then(res => res.json())
         .then(data => {
           if (data && data.name) {
